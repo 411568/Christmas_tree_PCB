@@ -1,0 +1,3 @@
+Layer Pairs Export File for PCB: C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc
+LayersSetName=Top_Bot_Plated_Thru_Holes|DrillFile=christmas_tree_pcb_copy-plated.txt|DrillLayers=gtl,gbl
+LayersSetName=Top_Bot_NonPlated_Thru_Holes|DrillFile=christmas_tree_pcb_copy-nonplated.txt|DrillLayers=gtl,gbl

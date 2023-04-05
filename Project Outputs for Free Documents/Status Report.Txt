@@ -1,0 +1,30 @@
+Project Outputs Generation Report
+---------------------------------
+Start Output Generation At 7:07:42 PM On 2/12/2023
+
+Output: Gerber Files
+Type  : Gerber
+From  : Variant [[No Variations]] of PCB Document [christmas_tree_pcb_copy.PcbDoc]
+   Generated File[christmas_tree_pcb_copy.GTO]
+   Generated File[christmas_tree_pcb_copy.GTP]
+   Generated File[christmas_tree_pcb_copy.GTS]
+   Generated File[christmas_tree_pcb_copy.GTL]
+   Generated File[christmas_tree_pcb_copy.GBL]
+   Generated File[christmas_tree_pcb_copy.GBS]
+   Generated File[christmas_tree_pcb_copy.GBP]
+   Generated File[christmas_tree_pcb_copy.GBO]
+   Generated File[christmas_tree_pcb_copy.GM1]
+   Generated File[christmas_tree_pcb_copy.GKO]
+   Generated File[christmas_tree_pcb_copy.GPT]
+   Generated File[christmas_tree_pcb_copy.GPB]
+   Generated File[christmas_tree_pcb_copy.GD1]
+   Generated File[christmas_tree_pcb_copy.GG1]
+   Generated File[christmas_tree_pcb_copy.GM]
+   Generated File[christmas_tree_pcb_copy.EXTREP]
+   Generated File[christmas_tree_pcb_copy.REP]
+
+
+Files Generated   : 17
+Documents Printed : 0
+
+Finished Output Generation At 7:07:45 PM On 2/12/2023

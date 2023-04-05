@@ -1,0 +1,16 @@
+Project Outputs Generation Report
+---------------------------------
+Start Output Generation At 7:15:21 PM On 2/12/2023
+
+Output: NC Drill Files
+Type  : NC Drill
+From  : PCB Document [christmas_tree_pcb_copy.PcbDoc]
+   Generated File[christmas_tree_pcb_copy.TXT]
+   Generated File[christmas_tree_pcb_copy.LDP]
+   Generated File[christmas_tree_pcb_copy.DRR]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 7:15:21 PM On 2/12/2023
