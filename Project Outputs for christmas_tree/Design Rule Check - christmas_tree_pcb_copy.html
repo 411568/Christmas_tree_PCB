@@ -1,0 +1,527 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 9em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD23\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">4/5/2023</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">4:38:32 PM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:01</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc" class="file"><acronym title="C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc">C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">61</td></tr>
+</table>
+</td>
+</table><a name="IDKW2OWIWH1WBFNVBQGUIFAFEGLEFWUIQKKBJLIYOYWTJHPYLWMROK"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDBZGKRD2VEI5INQARMUEKNDWWRUI43MX3QG2PKFJSTOZXX4RX1B">Clearance Constraint (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDC0M5XBFTVKA4GVMCUA5US1UFDGB0XFJGTCZVALLHYQNSE4E33AUB">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDHLLPZTLIZCX5GQLWKD51MWJ0GLZBWJXEPKKAM0I434RCGR1QDY5">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">24</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDSA4FACUIPOEVO1D5FPSKIOFXSMN5PSYQLICB2JGXNJIAK5KSXOZ">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDVK314FKTDIGXGTNYE5CRW3PWLCNHKZ22NTKOJVO3WKG1ECU34C3J">Width Constraint (Min=0.254mm) (Max=0.254mm) (Preferred=0.254mm) (All)</a></td>
+<td class="column2">10</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDLUIG0Z04KNQZKXZF1Q2HDAJ0CBK5RXCMXZSC1MFY1BUXLSYVSCW">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDOGBDLXYIK10ZYGLSRSGL545UFWYZOIXRYHVQFNBU3PBONRR4MBL">Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDHL0V42RUCARTF5EJCGDVWE4QTGU3AECG3NKNALC1PY2MRQJC1YOK">Hole To Hole Clearance (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDBVNTAQH1SVCSDJUGCS5UVXREEHBL0INCGI5YTSVSWS0KVPSLU1L">Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">16</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDQMMM5MAJ0TBGJ0AYDV5TQU25CGLSNXDAV01UFBL1REMV2IZCXFQD">Silk To Solder Mask (Clearance=0.254mm) (IsPad),(All)</a></td>
+<td class="column2">9</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDZVNHVDV0VA3RM35W2FJ2IC4RDL1XSSY2WZSCLBH1CKJIY2G3F53I">Silk to Silk (Clearance=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID3U2YF0EGCI3PI2BRUYZY4WJ2EKSCTEJCXCYXIIN355JVGUZXEXSL">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">2</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDIUQV4LRSELDZI4E4USDD2OKWAGG2OZUYWQ1ZZ1OBUD3TMOA020AJ">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">61</td>
+</tr>
+</table><br><a name="IDHLLPZTLIZCX5GQLWKD51MWJ0GLZBWJXEPKKAM0I434RCGR1QDY5"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Un-Routed Net Constraint ( (All) )</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4395.134mil|Location2.X=4629.984mil|Location1.Y=2644.352mil|Location2.Y=3094.551mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4395.134mil|Location2.X=4629.984mil|Location1.Y=2644.352mil|Location2.Y=3094.551mil|Absolute=True">Un-Routed Net Constraint: Net NetC5_0 Between Pad D7-2(42.485mm,14.015mm) on Top Layer And Pad C6-0(46.5mm,22.5mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2714.961mil|Location2.X=2914.961mil|Location1.Y=3131.496mil|Location2.Y=3367.717mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2714.961mil|Location2.X=2914.961mil|Location1.Y=3131.496mil|Location2.Y=3367.717mil|Absolute=True">Un-Routed Net Constraint: Net NetC7_1 Between Pad C8-1(1.5mm,28.08mm) on Bottom Layer And Track (1.5mm,28mm)(1.5mm,29mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2755.905mil|Location2.X=3651.575mil|Location1.Y=2125.984mil|Location2.Y=4015.748mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2755.905mil|Location2.X=3651.575mil|Location1.Y=2125.984mil|Location2.Y=4015.748mil|Absolute=True">Un-Routed Net Constraint: Polygon  (NONET_L01_P010) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2714.961mil|Location2.X=2941.338mil|Location1.Y=2892.126mil|Location2.Y=3101.969mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2714.961mil|Location2.X=2941.338mil|Location1.Y=2892.126mil|Location2.Y=3101.969mil|Absolute=True">Un-Routed Net Constraint: Net NetC7_0 Between Track (1.5mm,22mm)(6mm,17.5mm) on Bottom Layer And Track (1.5mm,22.92mm)(2.17mm,22.25mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3340.354mil|Location2.X=3368.039mil|Location1.Y=3603.787mil|Location2.Y=3631.472mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3340.354mil|Location2.X=3368.039mil|Location1.Y=3603.787mil|Location2.Y=3631.472mil|Absolute=True">Un-Routed Net Constraint: Via (15.197mm,37.888mm) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3358.354mil|Location2.X=3386.039mil|Location1.Y=3627.787mil|Location2.Y=3655.472mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3358.354mil|Location2.X=3386.039mil|Location1.Y=3627.787mil|Location2.Y=3655.472mil|Absolute=True">Un-Routed Net Constraint: Via (15.654mm,38.497mm) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3377.354mil|Location2.X=3405.039mil|Location1.Y=3650.787mil|Location2.Y=3678.472mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3377.354mil|Location2.X=3405.039mil|Location1.Y=3650.787mil|Location2.Y=3678.472mil|Absolute=True">Un-Routed Net Constraint: Via (16.136mm,39.082mm) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3392.354mil|Location2.X=3420.039mil|Location1.Y=3566.52mil|Location2.Y=3594.205mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3392.354mil|Location2.X=3420.039mil|Location1.Y=3566.52mil|Location2.Y=3594.205mil|Absolute=True">Un-Routed Net Constraint: Via (16.517mm,36.941mm) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3394.354mil|Location2.X=3422.039mil|Location1.Y=3673.787mil|Location2.Y=3701.472mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3394.354mil|Location2.X=3422.039mil|Location1.Y=3673.787mil|Location2.Y=3701.472mil|Absolute=True">Un-Routed Net Constraint: Via (16.568mm,39.666mm) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3428.354mil|Location2.X=3456.039mil|Location1.Y=3611.52mil|Location2.Y=3639.205mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3428.354mil|Location2.X=3456.039mil|Location1.Y=3611.52mil|Location2.Y=3639.205mil|Absolute=True">Un-Routed Net Constraint: Via (17.432mm,38.084mm) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3445.354mil|Location2.X=3473.039mil|Location1.Y=3634.52mil|Location2.Y=3662.205mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3445.354mil|Location2.X=3473.039mil|Location1.Y=3634.52mil|Location2.Y=3662.205mil|Absolute=True">Un-Routed Net Constraint: Via (17.864mm,38.668mm) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3411.354mil|Location2.X=3439.039mil|Location1.Y=3588.52mil|Location2.Y=3616.205mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3411.354mil|Location2.X=3439.039mil|Location1.Y=3588.52mil|Location2.Y=3616.205mil|Absolute=True">Un-Routed Net Constraint: Via (17mm,37.5mm) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3411.354mil|Location2.X=3439.039mil|Location1.Y=3696.787mil|Location2.Y=3724.472mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3411.354mil|Location2.X=3439.039mil|Location1.Y=3696.787mil|Location2.Y=3724.472mil|Absolute=True">Un-Routed Net Constraint: Via (17mm,40.25mm) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3463.354mil|Location2.X=3491.039mil|Location1.Y=3657.52mil|Location2.Y=3685.205mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3463.354mil|Location2.X=3491.039mil|Location1.Y=3657.52mil|Location2.Y=3685.205mil|Absolute=True">Un-Routed Net Constraint: Via (18.321mm,39.253mm) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3911.22mil|Location2.X=3938.905mil|Location1.Y=3649.992mil|Location2.Y=3677.677mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3911.22mil|Location2.X=3938.905mil|Location1.Y=3649.992mil|Location2.Y=3677.677mil|Absolute=True">Un-Routed Net Constraint: Via (29.697mm,39.061mm) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3929.22mil|Location2.X=3956.905mil|Location1.Y=3626.992mil|Location2.Y=3654.677mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3929.22mil|Location2.X=3956.905mil|Location1.Y=3626.992mil|Location2.Y=3654.677mil|Absolute=True">Un-Routed Net Constraint: Via (30.154mm,38.477mm) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3946.22mil|Location2.X=3973.905mil|Location1.Y=3603.992mil|Location2.Y=3631.677mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3946.22mil|Location2.X=3973.905mil|Location1.Y=3603.992mil|Location2.Y=3631.677mil|Absolute=True">Un-Routed Net Constraint: Via (30.586mm,37.893mm) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3963.22mil|Location2.X=3990.905mil|Location1.Y=3580.992mil|Location2.Y=3608.677mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3963.22mil|Location2.X=3990.905mil|Location1.Y=3580.992mil|Location2.Y=3608.677mil|Absolute=True">Un-Routed Net Constraint: Via (31.017mm,37.309mm) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3965.22mil|Location2.X=3992.905mil|Location1.Y=3700.102mil|Location2.Y=3727.787mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3965.22mil|Location2.X=3992.905mil|Location1.Y=3700.102mil|Location2.Y=3727.787mil|Absolute=True">Un-Routed Net Constraint: Via (31.068mm,40.334mm) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3982.22mil|Location2.X=4009.905mil|Location1.Y=3558.992mil|Location2.Y=3586.677mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3982.22mil|Location2.X=4009.905mil|Location1.Y=3558.992mil|Location2.Y=3586.677mil|Absolute=True">Un-Routed Net Constraint: Via (31.5mm,36.75mm) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3982.22mil|Location2.X=4009.905mil|Location1.Y=3677.102mil|Location2.Y=3704.787mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3982.22mil|Location2.X=4009.905mil|Location1.Y=3677.102mil|Location2.Y=3704.787mil|Absolute=True">Un-Routed Net Constraint: Via (31.5mm,39.75mm) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3999.22mil|Location2.X=4026.905mil|Location1.Y=3654.102mil|Location2.Y=3681.787mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3999.22mil|Location2.X=4026.905mil|Location1.Y=3654.102mil|Location2.Y=3681.787mil|Absolute=True">Un-Routed Net Constraint: Via (31.932mm,39.166mm) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4018.22mil|Location2.X=4045.905mil|Location1.Y=3631.102mil|Location2.Y=3658.787mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4018.22mil|Location2.X=4045.905mil|Location1.Y=3631.102mil|Location2.Y=3658.787mil|Absolute=True">Un-Routed Net Constraint: Via (32.414mm,38.582mm) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4036.22mil|Location2.X=4063.905mil|Location1.Y=3607.102mil|Location2.Y=3634.787mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4036.22mil|Location2.X=4063.905mil|Location1.Y=3607.102mil|Location2.Y=3634.787mil|Absolute=True">Un-Routed Net Constraint: Via (32.872mm,37.972mm) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDVK314FKTDIGXGTNYE5CRW3PWLCNHKZ22NTKOJVO3WKG1ECU34C3J"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Width Constraint (Min=0.254mm) (Max=0.254mm) (Preferred=0.254mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3310.25mil|Location2.X=3323.41mil|Location1.Y=2981.474mil|Location2.Y=2988.573mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3310.25mil|Location2.X=3323.41mil|Location1.Y=2981.474mil|Location2.Y=2988.573mil|Absolute=True">Width Constraint: Track (14.084mm,21.916mm)(14.172mm,21.828mm) on Top Layer Actual Width = 0mm, Target Width = 0.254mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3311.989mil|Location2.X=3325.149mil|Location1.Y=2979.72mil|Location2.Y=2986.826mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3311.989mil|Location2.X=3325.149mil|Location1.Y=2979.72mil|Location2.Y=2986.826mil|Absolute=True">Width Constraint: Track (14.172mm,21.828mm)(14.173mm,21.827mm) on Top Layer Actual Width = 0mm, Target Width = 0.254mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3359.809mil|Location2.X=3372.969mil|Location1.Y=3798.007mil|Location2.Y=3807.069mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3359.809mil|Location2.X=3372.969mil|Location1.Y=3798.007mil|Location2.Y=3807.069mil|Absolute=True">Width Constraint: Track (15.508mm,42.508mm)(15.508mm,42.508mm) on Bottom Layer Actual Width = 0mm, Target Width = 0.254mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3418.27mil|Location2.X=3431.43mil|Location1.Y=3856.469mil|Location2.Y=3865.531mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3418.27mil|Location2.X=3431.43mil|Location1.Y=3856.469mil|Location2.Y=3865.531mil|Absolute=True">Width Constraint: Track (16.992mm,43.992mm)(16.992mm,43.992mm) on Bottom Layer Actual Width = 0mm, Target Width = 0.254mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3949.531mil|Location2.X=3962.691mil|Location1.Y=3059.906mil|Location2.Y=3068.968mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3949.531mil|Location2.X=3962.691mil|Location1.Y=3059.906mil|Location2.Y=3068.968mil|Absolute=True">Width Constraint: Track (30.486mm,23.742mm)(30.486mm,23.777mm) on Bottom Layer Actual Width = 0mm, Target Width = 0.254mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4089.364mil|Location2.X=4104.026mil|Location1.Y=3000.763mil|Location2.Y=3003.767mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4089.364mil|Location2.X=4104.026mil|Location1.Y=3000.763mil|Location2.Y=3003.767mil|Absolute=True">Width Constraint: Track (33.574mm,22.258mm)(34.242mm,22.258mm) on Bottom Layer Actual Width = 0mm, Target Width = 0.254mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4263.259mil|Location2.X=4276.419mil|Location1.Y=2267.05mil|Location2.Y=2274.22mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4263.259mil|Location2.X=4276.419mil|Location1.Y=2267.05mil|Location2.Y=2274.22mil|Absolute=True">Width Constraint: Track (38.215mm,3.5mm)(38.458mm,3.742mm) on Top Layer Actual Width = 0mm, Target Width = 0.254mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4437.178mil|Location2.X=4451.84mil|Location1.Y=2213.362mil|Location2.Y=2216.366mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4437.178mil|Location2.X=4451.84mil|Location1.Y=2213.362mil|Location2.Y=2216.366mil|Absolute=True">Width Constraint: Track (42.742mm,2.258mm)(42.742mm,2.258mm) on Top Layer Actual Width = 0mm, Target Width = 0.254mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2911.884mil|Location2.X=2926.546mil|Location1.Y=2537.868mil|Location2.Y=2540.872mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2911.884mil|Location2.X=2926.546mil|Location1.Y=2537.868mil|Location2.Y=2540.872mil|Absolute=True">Width Constraint: Track (4mm,10.5mm)(4mm,10.5mm) on Bottom Layer Actual Width = 0mm, Target Width = 0.254mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3142.68mil|Location2.X=3155.84mil|Location1.Y=3203.186mil|Location2.Y=3212.248mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3142.68mil|Location2.X=3155.84mil|Location1.Y=3203.186mil|Location2.Y=3212.248mil|Absolute=True">Width Constraint: Track (9.992mm,27.242mm)(9.992mm,27.556mm) on Top Layer Actual Width = 0mm, Target Width = 0.254mm</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDBVNTAQH1SVCSDJUGCS5UVXREEHBL0INCGI5YTSVSWS0KVPSLU1L"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3357.572mil|Location2.X=3369.443mil|Location1.Y=3624.005mil|Location2.Y=3635.255mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3357.572mil|Location2.X=3369.443mil|Location1.Y=3624.005mil|Location2.Y=3635.255mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.059mm &lt; 0.254mm) Between Via (15.197mm,37.888mm) from Top Layer to Bottom Layer And Via (15.654mm,38.497mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.059mm] / [Bottom Solder] Mask Sliver [0.059mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3376.072mil|Location2.X=3387.595mil|Location1.Y=3647.505mil|Location2.Y=3658.755mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3376.072mil|Location2.X=3387.595mil|Location1.Y=3647.505mil|Location2.Y=3658.755mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.055mm &lt; 0.254mm) Between Via (15.654mm,38.497mm) from Top Layer to Bottom Layer And Via (16.136mm,39.082mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.055mm] / [Bottom Solder] Mask Sliver [0.055mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3394.072mil|Location2.X=3405.992mil|Location1.Y=3670.505mil|Location2.Y=3681.755mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3394.072mil|Location2.X=3405.992mil|Location1.Y=3670.505mil|Location2.Y=3681.755mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.023mm &lt; 0.254mm) Between Via (16.136mm,39.082mm) from Top Layer to Bottom Layer And Via (16.568mm,39.666mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.023mm] / [Bottom Solder] Mask Sliver [0.023mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3410.072mil|Location2.X=3421.424mil|Location1.Y=3585.737mil|Location2.Y=3596.987mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3410.072mil|Location2.X=3421.424mil|Location1.Y=3585.737mil|Location2.Y=3596.987mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.035mm &lt; 0.254mm) Between Via (16.517mm,36.941mm) from Top Layer to Bottom Layer And Via (17mm,37.5mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.035mm] / [Bottom Solder] Mask Sliver [0.035mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3411.072mil|Location2.X=3422.992mil|Location1.Y=3693.505mil|Location2.Y=3704.755mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3411.072mil|Location2.X=3422.992mil|Location1.Y=3693.505mil|Location2.Y=3704.755mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.023mm &lt; 0.254mm) Between Via (16.568mm,39.666mm) from Top Layer to Bottom Layer And Via (17mm,40.25mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.023mm] / [Bottom Solder] Mask Sliver [0.023mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3445.072mil|Location2.X=3456.992mil|Location1.Y=3631.237mil|Location2.Y=3642.487mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3445.072mil|Location2.X=3456.992mil|Location1.Y=3631.237mil|Location2.Y=3642.487mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.023mm &lt; 0.254mm) Between Via (17.432mm,38.084mm) from Top Layer to Bottom Layer And Via (17.864mm,38.668mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.023mm] / [Bottom Solder] Mask Sliver [0.023mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3428.072mil|Location2.X=3439.992mil|Location1.Y=3608.237mil|Location2.Y=3619.487mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3428.072mil|Location2.X=3439.992mil|Location1.Y=3608.237mil|Location2.Y=3619.487mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.023mm &lt; 0.254mm) Between Via (17.432mm,38.084mm) from Top Layer to Bottom Layer And Via (17mm,37.5mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.023mm] / [Bottom Solder] Mask Sliver [0.023mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3462.572mil|Location2.X=3474.294mil|Location1.Y=3654.237mil|Location2.Y=3665.487mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3462.572mil|Location2.X=3474.294mil|Location1.Y=3654.237mil|Location2.Y=3665.487mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.039mm &lt; 0.254mm) Between Via (17.864mm,38.668mm) from Top Layer to Bottom Layer And Via (18.321mm,39.253mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.039mm] / [Bottom Solder] Mask Sliver [0.039mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3928.438mil|Location2.X=3940.098mil|Location1.Y=3646.71mil|Location2.Y=3657.96mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3928.438mil|Location2.X=3940.098mil|Location1.Y=3646.71mil|Location2.Y=3657.96mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.039mm &lt; 0.254mm) Between Via (29.697mm,39.061mm) from Top Layer to Bottom Layer And Via (30.154mm,38.477mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.039mm] / [Bottom Solder] Mask Sliver [0.039mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3945.938mil|Location2.X=3957.799mil|Location1.Y=3623.71mil|Location2.Y=3634.96mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3945.938mil|Location2.X=3957.799mil|Location1.Y=3623.71mil|Location2.Y=3634.96mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.023mm &lt; 0.254mm) Between Via (30.154mm,38.477mm) from Top Layer to Bottom Layer And Via (30.586mm,37.893mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.023mm] / [Bottom Solder] Mask Sliver [0.023mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3962.938mil|Location2.X=3974.799mil|Location1.Y=3600.71mil|Location2.Y=3611.96mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3962.938mil|Location2.X=3974.799mil|Location1.Y=3600.71mil|Location2.Y=3611.96mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.023mm &lt; 0.254mm) Between Via (30.586mm,37.893mm) from Top Layer to Bottom Layer And Via (31.017mm,37.309mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.023mm] / [Bottom Solder] Mask Sliver [0.023mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3980.938mil|Location2.X=3992.225mil|Location1.Y=3578.21mil|Location2.Y=3589.46mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3980.938mil|Location2.X=3992.225mil|Location1.Y=3578.21mil|Location2.Y=3589.46mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.035mm &lt; 0.254mm) Between Via (31.017mm,37.309mm) from Top Layer to Bottom Layer And Via (31.5mm,36.75mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.035mm] / [Bottom Solder] Mask Sliver [0.035mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3981.938mil|Location2.X=3993.799mil|Location1.Y=3696.82mil|Location2.Y=3708.07mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3981.938mil|Location2.X=3993.799mil|Location1.Y=3696.82mil|Location2.Y=3708.07mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.023mm &lt; 0.254mm) Between Via (31.068mm,40.334mm) from Top Layer to Bottom Layer And Via (31.5mm,39.75mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.023mm] / [Bottom Solder] Mask Sliver [0.023mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3998.938mil|Location2.X=4010.799mil|Location1.Y=3673.82mil|Location2.Y=3685.07mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3998.938mil|Location2.X=4010.799mil|Location1.Y=3673.82mil|Location2.Y=3685.07mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.023mm &lt; 0.254mm) Between Via (31.5mm,39.75mm) from Top Layer to Bottom Layer And Via (31.932mm,39.166mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.023mm] / [Bottom Solder] Mask Sliver [0.023mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4016.938mil|Location2.X=4028.398mil|Location1.Y=3650.82mil|Location2.Y=3662.07mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4016.938mil|Location2.X=4028.398mil|Location1.Y=3650.82mil|Location2.Y=3662.07mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.055mm &lt; 0.254mm) Between Via (31.932mm,39.166mm) from Top Layer to Bottom Layer And Via (32.414mm,38.582mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.055mm] / [Bottom Solder] Mask Sliver [0.055mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4035.438mil|Location2.X=4047.249mil|Location1.Y=3627.32mil|Location2.Y=3638.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4035.438mil|Location2.X=4047.249mil|Location1.Y=3627.32mil|Location2.Y=3638.57mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.059mm &lt; 0.254mm) Between Via (32.414mm,38.582mm) from Top Layer to Bottom Layer And Via (32.872mm,37.972mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.059mm] / [Bottom Solder] Mask Sliver [0.059mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDQMMM5MAJ0TBGJ0AYDV5TQU25CGLSNXDAV01UFBL1REMV2IZCXFQD"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk To Solder Mask (Clearance=0.254mm) (IsPad),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4641.836mil|Location2.X=4649.503mil|Location1.Y=2929.238mil|Location2.Y=2936.904mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4641.836mil|Location2.X=4649.503mil|Location1.Y=2929.238mil|Location2.Y=2936.904mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad C5-0(46.5mm,22.5mm) on Top Layer And Track (48mm,2mm)(48mm,48mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4641.836mil|Location2.X=4649.503mil|Location1.Y=3129.238mil|Location2.Y=3136.904mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4641.836mil|Location2.X=4649.503mil|Location1.Y=3129.238mil|Location2.Y=3136.904mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad C5-1(46.5mm,27.58mm) on Top Layer And Track (48mm,2mm)(48mm,48mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4641.836mil|Location2.X=4649.503mil|Location1.Y=2929.238mil|Location2.Y=2936.904mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4641.836mil|Location2.X=4649.503mil|Location1.Y=2929.238mil|Location2.Y=2936.904mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad C6-0(46.5mm,22.5mm) on Bottom Layer And Track (48mm,2.1mm)(48mm,48.1mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4641.836mil|Location2.X=4649.503mil|Location1.Y=3129.238mil|Location2.Y=3136.904mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4641.836mil|Location2.X=4649.503mil|Location1.Y=3129.238mil|Location2.Y=3136.904mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad C6-1(46.5mm,27.58mm) on Bottom Layer And Track (48mm,2.1mm)(48mm,48.1mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2752.072mil|Location2.X=2759.739mil|Location1.Y=2945.773mil|Location2.Y=2953.44mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2752.072mil|Location2.X=2759.739mil|Location1.Y=2945.773mil|Location2.Y=2953.44mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad C7-0(1.5mm,22.92mm) on Top Layer And Track (0mm,1.6mm)(0mm,33mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2752.072mil|Location2.X=2759.739mil|Location1.Y=3145.773mil|Location2.Y=3153.44mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2752.072mil|Location2.X=2759.739mil|Location1.Y=3145.773mil|Location2.Y=3153.44mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad C7-1(1.5mm,28mm) on Top Layer And Track (0mm,1.6mm)(0mm,33mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2752.072mil|Location2.X=2759.739mil|Location1.Y=2948.923mil|Location2.Y=2956.589mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2752.072mil|Location2.X=2759.739mil|Location1.Y=2948.923mil|Location2.Y=2956.589mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad C8-0(1.5mm,23mm) on Bottom Layer And Track (0mm,1.7mm)(0mm,33.1mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2752.072mil|Location2.X=2759.739mil|Location1.Y=3148.923mil|Location2.Y=3156.589mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2752.072mil|Location2.X=2759.739mil|Location1.Y=3148.923mil|Location2.Y=3156.589mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad C8-1(1.5mm,28.08mm) on Bottom Layer And Track (0mm,1.7mm)(0mm,33.1mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3013.662mil|Location2.X=3024.912mil|Location1.Y=2143.317mil|Location2.Y=2154.567mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3013.662mil|Location2.X=3024.912mil|Location1.Y=2143.317mil|Location2.Y=2154.567mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.166mm &lt; 0.254mm) Between Pad SW1-5(6.671mm,1.306mm) on Top Layer And Track (1.25mm,0mm)(46.75mm,0mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.166mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="ID3U2YF0EGCI3PI2BRUYZY4WJ2EKSCTEJCXCYXIIN355JVGUZXEXSL"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Net Antennae (Tolerance=0mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2792.303mil|Location2.X=2868.139mil|Location1.Y=2811.988mil|Location2.Y=2933.944mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2792.303mil|Location2.X=2868.139mil|Location1.Y=2811.988mil|Location2.Y=2933.944mil|Absolute=True">Net Antennae: Via (1.75mm,18.25mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2959.626mil|Location2.X=3035.461mil|Location1.Y=3540.335mil|Location2.Y=3662.291mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2959.626mil|Location2.X=3035.461mil|Location1.Y=3540.335mil|Location2.Y=3662.291mil|Absolute=True">Net Antennae: Via (6mm,36.75mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>
