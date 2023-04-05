@@ -1,16 +1,14 @@
-Project Outputs Generation Report
----------------------------------
-Start Output Generation At 7:15:21 PM On 2/12/2023
+Source PCB Design pcb_panel_v3.PcbDoc contains embedded board array. It is recomended to generate individual BOM for each embedded board PCB design.
 
 Output: NC Drill Files
 Type  : NC Drill
-From  : PCB Document [christmas_tree_pcb_copy.PcbDoc]
-   Generated File[christmas_tree_pcb_copy.TXT]
-   Generated File[christmas_tree_pcb_copy.LDP]
-   Generated File[christmas_tree_pcb_copy.DRR]
+From  : Project [christmas_tree.PrjPcb]
+   Generated File[pcb_panel_v3.TXT]
+   Generated File[pcb_panel_v3.LDP]
+   Generated File[pcb_panel_v3.DRR]
 
 
 Files Generated   : 3
 Documents Printed : 0
 
-Finished Output Generation At 7:15:21 PM On 2/12/2023
+Finished Output Generation At 6:06:34 PM On 4/5/2023

@@ -116,6 +116,227 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=UINRPXOQ
 
+[Document5]
+DocumentPath=christmas_tree_panel_pcb.PcbDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=MMOGLLYE
+
+[Document6]
+DocumentPath=pcb_panel_v2.PcbDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=ANQXJCBO
+
+[Document7]
+DocumentPath=pcb_panel_v3.PcbDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=JFIISNVY
+
+[Document8]
+DocumentPath=gerbers_panel_v3\CAMtastic1.Cam
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
+
+[Document9]
+DocumentPath=gerbers_panel_v3\CAMtastic2.Cam
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
+
+[Document10]
+DocumentPath=gerbers_panel_v3_2\CAMtastic3.Cam
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
+
+[Document11]
+DocumentPath=gerbers_panel_v3_2\CAMtastic4.Cam
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
+
+[Document12]
+DocumentPath=gerber_panel_v3_3\CAMtastic5.Cam
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
+
+[Document13]
+DocumentPath=gerber_panel_v3_3\CAMtastic6.Cam
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
+
+[Document14]
+DocumentPath=gerber_panel_v3_4\CAMtastic7.Cam
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
+
+[Document15]
+DocumentPath=gerber_panel_v3_4\CAMtastic8.Cam
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
+
+[Document16]
+DocumentPath=gerbers_panel_v3\CAMtastic9.Cam
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
+
+[Document17]
+DocumentPath=gerbers_panel_v3\CAMtastic10.Cam
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
+
 [GeneratedDocument1]
 DocumentPath=Project Outputs for christmas_tree\christmas_tree_pcb.DRR
 DItemRevisionGUID=
@@ -636,6 +857,170 @@ DItemRevisionGUID=
 DocumentPath=Project Outputs for christmas_tree\Design Rule Check - christmas_tree_pcb_copy.html
 DItemRevisionGUID=
 
+[GeneratedDocument131]
+DocumentPath=Project Outputs for christmas_tree\pcb_panel_v3.DRR
+DItemRevisionGUID=
+
+[GeneratedDocument132]
+DocumentPath=Project Outputs for christmas_tree\pcb_panel_v3.EXTREP
+DItemRevisionGUID=
+
+[GeneratedDocument133]
+DocumentPath=Project Outputs for christmas_tree\pcb_panel_v3.GBL
+DItemRevisionGUID=
+
+[GeneratedDocument134]
+DocumentPath=Project Outputs for christmas_tree\pcb_panel_v3.GBO
+DItemRevisionGUID=
+
+[GeneratedDocument135]
+DocumentPath=Project Outputs for christmas_tree\pcb_panel_v3.GBP
+DItemRevisionGUID=
+
+[GeneratedDocument136]
+DocumentPath=Project Outputs for christmas_tree\pcb_panel_v3.GBS
+DItemRevisionGUID=
+
+[GeneratedDocument137]
+DocumentPath=Project Outputs for christmas_tree\pcb_panel_v3.GD1
+DItemRevisionGUID=
+
+[GeneratedDocument138]
+DocumentPath=Project Outputs for christmas_tree\pcb_panel_v3.GG1
+DItemRevisionGUID=
+
+[GeneratedDocument139]
+DocumentPath=Project Outputs for christmas_tree\pcb_panel_v3.GKO
+DItemRevisionGUID=
+
+[GeneratedDocument140]
+DocumentPath=Project Outputs for christmas_tree\pcb_panel_v3.GM
+DItemRevisionGUID=
+
+[GeneratedDocument141]
+DocumentPath=Project Outputs for christmas_tree\pcb_panel_v3.GM1
+DItemRevisionGUID=
+
+[GeneratedDocument142]
+DocumentPath=Project Outputs for christmas_tree\pcb_panel_v3.GM2
+DItemRevisionGUID=
+
+[GeneratedDocument143]
+DocumentPath=Project Outputs for christmas_tree\pcb_panel_v3.GM3
+DItemRevisionGUID=
+
+[GeneratedDocument144]
+DocumentPath=Project Outputs for christmas_tree\pcb_panel_v3.GM5
+DItemRevisionGUID=
+
+[GeneratedDocument145]
+DocumentPath=Project Outputs for christmas_tree\pcb_panel_v3.GM13
+DItemRevisionGUID=
+
+[GeneratedDocument146]
+DocumentPath=Project Outputs for christmas_tree\pcb_panel_v3.GM15
+DItemRevisionGUID=
+
+[GeneratedDocument147]
+DocumentPath=Project Outputs for christmas_tree\pcb_panel_v3.GM16
+DItemRevisionGUID=
+
+[GeneratedDocument148]
+DocumentPath=Project Outputs for christmas_tree\pcb_panel_v3.GM20
+DItemRevisionGUID=
+
+[GeneratedDocument149]
+DocumentPath=Project Outputs for christmas_tree\pcb_panel_v3.GM21
+DItemRevisionGUID=
+
+[GeneratedDocument150]
+DocumentPath=Project Outputs for christmas_tree\pcb_panel_v3.GM23
+DItemRevisionGUID=
+
+[GeneratedDocument151]
+DocumentPath=Project Outputs for christmas_tree\pcb_panel_v3.GM24
+DItemRevisionGUID=
+
+[GeneratedDocument152]
+DocumentPath=Project Outputs for christmas_tree\pcb_panel_v3.GPB
+DItemRevisionGUID=
+
+[GeneratedDocument153]
+DocumentPath=Project Outputs for christmas_tree\pcb_panel_v3.GPT
+DItemRevisionGUID=
+
+[GeneratedDocument154]
+DocumentPath=Project Outputs for christmas_tree\pcb_panel_v3.GTL
+DItemRevisionGUID=
+
+[GeneratedDocument155]
+DocumentPath=Project Outputs for christmas_tree\pcb_panel_v3.GTO
+DItemRevisionGUID=
+
+[GeneratedDocument156]
+DocumentPath=Project Outputs for christmas_tree\pcb_panel_v3.GTP
+DItemRevisionGUID=
+
+[GeneratedDocument157]
+DocumentPath=Project Outputs for christmas_tree\pcb_panel_v3.GTS
+DItemRevisionGUID=
+
+[GeneratedDocument158]
+DocumentPath=Project Outputs for christmas_tree\pcb_panel_v3.LDP
+DItemRevisionGUID=
+
+[GeneratedDocument159]
+DocumentPath=Project Outputs for christmas_tree\pcb_panel_v3.REP
+DItemRevisionGUID=
+
+[GeneratedDocument160]
+DocumentPath=Project Outputs for christmas_tree\pcb_panel_v3.TXT
+DItemRevisionGUID=
+
+[GeneratedDocument161]
+DocumentPath=Project Outputs for christmas_tree\pcb_panel_v3_Copper_Signal_Top.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument162]
+DocumentPath=Project Outputs for christmas_tree\pcb_panel_v3_Drawing_1.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument163]
+DocumentPath=Project Outputs for christmas_tree\pcb_panel_v3_Drillmap_1.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument164]
+DocumentPath=Project Outputs for christmas_tree\pcb_panel_v3_Mechanical_1.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument165]
+DocumentPath=Project Outputs for christmas_tree\pcb_panel_v3_Pads_Bot.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument166]
+DocumentPath=Project Outputs for christmas_tree\pcb_panel_v3_Pads_Top.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument167]
+DocumentPath=Project Outputs for christmas_tree\pcb_panel_v3_Paste_Bot.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument168]
+DocumentPath=Project Outputs for christmas_tree\pcb_panel_v3_Paste_Top.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument169]
+DocumentPath=Project Outputs for christmas_tree\pcb_panel_v3_Profile.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument170]
+DocumentPath=Project Outputs for christmas_tree\pcb_panel_v3_Soldermask_Bot.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument171]
+DocumentPath=Project Outputs for christmas_tree\pcb_panel_v3_Soldermask_Top.gbr
+DItemRevisionGUID=
+
 [Configuration1]
 Name=Sources
 ParameterCount=0
@@ -1055,7 +1440,7 @@ OutputDefault1=0
 Configuration1_Name1=ForceUpdateSettings
 Configuration1_Item1=False
 Configuration1_Name2=OutputConfigurationParameter1
-Configuration1_Item2=BoardEdgeRoutToolDia=2000000|GenerateBoardEdgeRout=True|GenerateDrilledSlotsG85=False|GenerateEIADrillFile=False|GenerateSeparatePlatedNonPlatedFiles=True|GenerateSeparateViaTypeFiles=False|GenerateToolsByDrillSymbols=False|NumberOfDecimals=4|NumberOfUnits=2|OptimizeChangeLocationCommands=True|OriginPosition=Relative|Record=DrillView|Units=Imperial|ZeroesMode=SuppressLeadingZeroes|DocumentPath=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc
+Configuration1_Item2=BoardEdgeRoutToolDia=2000000|GenerateBoardEdgeRout=False|GenerateDrilledSlotsG85=False|GenerateEIADrillFile=False|GenerateSeparatePlatedNonPlatedFiles=False|GenerateSeparateViaTypeFiles=False|GenerateToolsByDrillSymbols=False|NumberOfDecimals=4|NumberOfUnits=2|OptimizeChangeLocationCommands=True|OriginPosition=Relative|Record=DrillView|Units=Imperial|ZeroesMode=SuppressLeadingZeroes|DocumentPath=C:\Users\Public\Documents\Altium\christmas_tree\pcb_panel_v3.PcbDoc
 OutputType2=Mask
 OutputName2=Solder/Paste Mask Prints
 OutputDocumentPath2=
@@ -1156,7 +1541,7 @@ OutputDefault12=0
 Configuration12_Name1=ForceUpdateSettings
 Configuration12_Item1=False
 Configuration12_Name2=OutputConfigurationParameter1
-Configuration12_Item2=AddToAllLayerClasses.Set= |AddToAllPlots.Set=SerializeLayerHash.Version~2,ClassName~TPlotLayerStateArray|BoardID=BENANQIW|CentrePlots=False|DrillDrawingSymbol=GraphicsSymbol|DrillDrawingSymbolSize=500000|EmbeddedApertures=True|FilmBorderSize=10000000|FilmXSize=200000000|FilmYSize=160000000|FlashAllFills=False|FlashPadShapes=True|G54OnApertureChange=False|GenerateDRCRulesFile=False|GenerateDRCRulesFile=False|GenerateReliefShapes=True|GenerateReports=True|GerberUnit=Imperial|GerberUnit=Imperial|IncludeUnconnectedMidLayerPads=True|LayerClassesMirror.Set= |LayerClassesPlot.Set= |LeadingAndTrailingZeroesMode=SuppressLeadingZeroes|MaxApertureSize=2500000|MergePadAndRegion=False|MinusApertureTolerance=50|MinusApertureTolerance=50|Mirror.Set=SerializeLayerHash.Version~2,ClassName~TPlotLayerStateArray|MirrorDrillDrawingPlots=False|MirrorDrillGuidePlots=False|NoRegularPolygons=False|NumberOfDecimals=3|NumberOfDecimals=3|OptimizeChangeLocationCommands=True|OptimizeChangeLocationCommands=True|OriginPosition=Relative|Panelize=False|Plot.Set=SerializeLayerHash.Version~2,ClassName~TPlotLayerStateArray,16777217~1,16842751~1,16973830~1,16973831~1,16973834~1,16973835~1,16973832~1,16973833~1,16908289~1,16908290~1,16908291~1,16908293~1,16908301~1,16908303~1,16908304~1,16908308~1,16908309~1,16908311~1,16908312~1,16973848~1,16973849~1|PlotBoardProfile=True|PlotBoardProfileFileName=christmas_tree_pcb.GM|PlotDrillDrawingLayerPair0_Backdrill=False|PlotDrillDrawingLayerPair0_Checked=True|PlotDrillDrawingLayerPair0_DrillType=Regular|PlotDrillDrawingLayerPair0_FileName=christmas_tree_pcb.GD1|PlotDrillDrawingLayerPair0_HighLayer=Bottom Layer|PlotDrillDrawingLayerPair0_LowLayer=Top Layer|PlotDrillGuideLayerPair0_Backdrill=False|PlotDrillGuideLayerPair0_Checked=True|PlotDrillGuideLayerPair0_DrillType=Regular|PlotDrillGuideLayerPair0_FileName=christmas_tree_pcb.GG1|PlotDrillGuideLayerPair0_HighLayer=Bottom Layer|PlotDrillGuideLayerPair0_LowLayer=Top Layer|PlotPositivePlaneLayers=False|PlotUsedDrillDrawingLayerPairs=False|PlotUsedDrillGuideLayerPairs=False|PlusApertureTolerance=50|PlusApertureTolerance=50|Record=GerberView|SoftwareArcs=False|Sorted=False|Sorted=False|UserLayerName.Caption0=christmas_tree_pcb.GBO|UserLayerName.Caption1=christmas_tree_pcb.GTP|UserLayerName.Caption10=christmas_tree_pcb.GBP|UserLayerName.Caption11=christmas_tree_pcb.GBS|UserLayerName.Caption12=christmas_tree_pcb.GM16|UserLayerName.Caption13=christmas_tree_pcb.GM1|UserLayerName.Caption14=christmas_tree_pcb.GBL|UserLayerName.Caption15=christmas_tree_pcb.GM5|UserLayerName.Caption16=christmas_tree_pcb.GM15|UserLayerName.Caption17=christmas_tree_pcb.GM24|UserLayerName.Caption18=christmas_tree_pcb.GM3|UserLayerName.Caption19=christmas_tree_pcb.GM20|UserLayerName.Caption2=christmas_tree_pcb.GTO|UserLayerName.Caption20=christmas_tree_pcb.GTL|UserLayerName.Caption21=christmas_tree_pcb.GKO|UserLayerName.Caption3=christmas_tree_pcb.GTS|UserLayerName.Caption4=christmas_tree_pcb.GM13|UserLayerName.Caption5=christmas_tree_pcb.GM2|UserLayerName.Caption6=christmas_tree_pcb.GM21|UserLayerName.Caption7=christmas_tree_pcb.GM23|UserLayerName.Caption8=christmas_tree_pcb.GPT|UserLayerName.Caption9=christmas_tree_pcb.GPB|UserLayerName.Count=22|UserLayerName.Layer0=16973831|UserLayerName.Layer1=16973832|UserLayerName.Layer10=16973833|UserLayerName.Layer11=16973835|UserLayerName.Layer12=16908304|UserLayerName.Layer13=16908289|UserLayerName.Layer14=16842751|UserLayerName.Layer15=16908293|UserLayerName.Layer16=16908303|UserLayerName.Layer17=16908312|UserLayerName.Layer18=16908291|UserLayerName.Layer19=16908308|UserLayerName.Layer2=16973830|UserLayerName.Layer20=16777217|UserLayerName.Layer21=16973837|UserLayerName.Layer3=16973834|UserLayerName.Layer4=16908301|UserLayerName.Layer5=16908290|UserLayerName.Layer6=16908309|UserLayerName.Layer7=16908311|UserLayerName.Layer8=16973848|UserLayerName.Layer9=16973849|DocumentPath=C:\Users\Public\Documents\Altium\christmas_tree\christmas_tree_pcb_copy.PcbDoc
+Configuration12_Item2=AddToAllLayerClasses.Set= |AddToAllPlots.Set=SerializeLayerHash.Version~2,ClassName~TPlotLayerStateArray|BoardID=JFIISNVY|CentrePlots=False|DrillDrawingSymbol=GraphicsSymbol|DrillDrawingSymbolSize=500000|EmbeddedApertures=True|FilmBorderSize=10000000|FilmXSize=200000000|FilmYSize=160000000|FlashAllFills=False|FlashPadShapes=True|G54OnApertureChange=False|GenerateDRCRulesFile=False|GenerateDRCRulesFile=False|GenerateReliefShapes=True|GenerateReports=True|GerberUnit=Imperial|GerberUnit=Imperial|IncludeUnconnectedMidLayerPads=True|LayerClassesMirror.Set= |LayerClassesPlot.Set= |LeadingAndTrailingZeroesMode=SuppressLeadingZeroes|MaxApertureSize=2500000|MergePadAndRegion=False|MinusApertureTolerance=50|MinusApertureTolerance=50|Mirror.Set=SerializeLayerHash.Version~2,ClassName~TPlotLayerStateArray|MirrorDrillDrawingPlots=False|MirrorDrillGuidePlots=False|NoRegularPolygons=False|NumberOfDecimals=5|NumberOfDecimals=5|OptimizeChangeLocationCommands=True|OptimizeChangeLocationCommands=True|OriginPosition=Relative|Panelize=False|Plot.Set=SerializeLayerHash.Version~2,ClassName~TPlotLayerStateArray,16777217~1,16973834~1,16973835~1,16973832~1,16973833~1,16908289~1,16973848~1,16973849~1,16842751~1,16973830~1,16973831~1,16908290~1,16908291~1,16908293~1,16908301~1,16908303~1,16908304~1,16908308~1,16908309~1,16908311~1,16908312~1,16973837~1|PlotBoardProfile=True|PlotBoardProfileFileName=pcb_panel_v3.GM|PlotDrillDrawingLayerPair0_Backdrill=False|PlotDrillDrawingLayerPair0_Checked=True|PlotDrillDrawingLayerPair0_DrillType=Regular|PlotDrillDrawingLayerPair0_FileName=pcb_panel_v3.GD1|PlotDrillDrawingLayerPair0_HighLayer=Bottom Layer|PlotDrillDrawingLayerPair0_LowLayer=Top Layer|PlotDrillGuideLayerPair0_Backdrill=False|PlotDrillGuideLayerPair0_Checked=True|PlotDrillGuideLayerPair0_DrillType=Regular|PlotDrillGuideLayerPair0_FileName=pcb_panel_v3.GG1|PlotDrillGuideLayerPair0_HighLayer=Bottom Layer|PlotDrillGuideLayerPair0_LowLayer=Top Layer|PlotPositivePlaneLayers=False|PlotUsedDrillDrawingLayerPairs=False|PlotUsedDrillGuideLayerPairs=False|PlusApertureTolerance=50|PlusApertureTolerance=50|Record=GerberView|SoftwareArcs=True|Sorted=False|Sorted=False|UserLayerName.Caption0=pcb_panel_v3.GBO|UserLayerName.Caption1=pcb_panel_v3.GTP|UserLayerName.Caption10=pcb_panel_v3.GKO|UserLayerName.Caption11=pcb_panel_v3.GBS|UserLayerName.Caption12=pcb_panel_v3.GM16|UserLayerName.Caption13=pcb_panel_v3.GM1|UserLayerName.Caption14=pcb_panel_v3.GBL|UserLayerName.Caption15=pcb_panel_v3.GM5|UserLayerName.Caption16=pcb_panel_v3.GM15|UserLayerName.Caption17=pcb_panel_v3.GM24|UserLayerName.Caption18=pcb_panel_v3.GM3|UserLayerName.Caption19=pcb_panel_v3.GM20|UserLayerName.Caption2=pcb_panel_v3.GTO|UserLayerName.Caption20=pcb_panel_v3.GTL|UserLayerName.Caption21=pcb_panel_v3.GBP|UserLayerName.Caption3=pcb_panel_v3.GTS|UserLayerName.Caption4=pcb_panel_v3.GM13|UserLayerName.Caption5=pcb_panel_v3.GM2|UserLayerName.Caption6=pcb_panel_v3.GM21|UserLayerName.Caption7=pcb_panel_v3.GM23|UserLayerName.Caption8=pcb_panel_v3.GPT|UserLayerName.Caption9=pcb_panel_v3.GPB|UserLayerName.Count=22|UserLayerName.Layer0=16973831|UserLayerName.Layer1=16973832|UserLayerName.Layer10=16973837|UserLayerName.Layer11=16973835|UserLayerName.Layer12=16908304|UserLayerName.Layer13=16908289|UserLayerName.Layer14=16842751|UserLayerName.Layer15=16908293|UserLayerName.Layer16=16908303|UserLayerName.Layer17=16908312|UserLayerName.Layer18=16908291|UserLayerName.Layer19=16908308|UserLayerName.Layer2=16973830|UserLayerName.Layer20=16777217|UserLayerName.Layer21=16973833|UserLayerName.Layer3=16973834|UserLayerName.Layer4=16908301|UserLayerName.Layer5=16908290|UserLayerName.Layer6=16908309|UserLayerName.Layer7=16908311|UserLayerName.Layer8=16973848|UserLayerName.Layer9=16973849|DocumentPath=C:\Users\Public\Documents\Altium\christmas_tree\pcb_panel_v3.PcbDoc
 
 [OutputGroup6]
 Name=Report Outputs
